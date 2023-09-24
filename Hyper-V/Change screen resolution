@@ -10,6 +10,6 @@ Run below command
 sudo update-grub
 
 Open PowerShell as Admin
-set-vm "Ubuntu" -EnhancedSessionTransportType HVSocket
+set-vm "raspberrypi" -EnhancedSessionTransportType HVSocket
 
 Start VM. Display settings should scale to specified resolution once GUI desktop loads
