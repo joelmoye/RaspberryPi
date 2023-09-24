@@ -1,0 +1,15 @@
+Below worked for me. Tested on RaspberryPi-BullsEye-PC | Host Windows 11.
+
+Open grub file.
+sudo nano /etc/default/grub
+
+Change value of GRUB_CMDLINE_LINUX_DEFAULT with below. Replace 3840x2160 with your highest resolution.
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash video=hyperv_fb:3840x2160"
+
+Run below command
+sudo update-grub
+
+Open PowerShell as Admin
+set-vm "Ubuntu" -EnhancedSessionTransportType HVSocket
+
+Start VM. Display settings should scale to specified resolution once GUI desktop loads
